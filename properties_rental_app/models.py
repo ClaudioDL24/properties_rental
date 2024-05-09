@@ -25,7 +25,19 @@ class User(models.Model):
 
     def __str__(self):
         return f"{self.name} {self.surnames}"
+    
+class State(models.Model):
+    name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
+class County(models.Model):
+    name = models.CharField(max_length=100)
+    id_state = models.ForeignKey(State, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 class TypeProperty(models.Model):
     description = models.CharField(max_length=100)
@@ -42,7 +54,7 @@ class Property(models.Model):
     qty_rooms = models.PositiveIntegerField()
     qty_bathrooms = models.PositiveIntegerField()
     address = models.CharField(max_length=255)
-    county = models.CharField(max_length=100)
+    id_county = models.ForeignKey(County, on_delete=models.CASCADE) 
     id_type_property = models.ForeignKey(TypeProperty, on_delete=models.CASCADE, related_name='users' )
     rental_price = models.DecimalField(max_digits=10, decimal_places=2)
     is_public = models.BooleanField(default=True)  # Nuevo campo para indicar el estado de publicación

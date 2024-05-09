@@ -6,6 +6,12 @@ Properties Rental es una empresa dedicada al arriendo de inmuebles y requiere cr
 
 El proyecto constituye una actividad que se desarrollará a lo largo de todo módulo. Para ello, esta se dividirá en los 5 hitos (o partes), que segmentarán los procesos que construirán completamente el proyecto. Por lo tanto este es un ejercicio acumulativo y que para avanzar al siguiente paso, siempre se deber contar con el desarrollo del hito que lo antecede. De tal manera, se procura siempre avanzar y corregir aquellos elementos que sean necesarios para completar el proyecto.
 
+Hito 1- Conectando Django a una base de datos.
+Hito 2- Migraciones y recuperación de datos con Django.
+Hito 3 - Creando una aplicación usando datos con Django y el patrón MVC.
+Hito 4 - Creando una aplicación usando datos con Django y su ORM.
+Hito 5 - Presentación del proyecto.
+
 El proyecto está en GitHub y es público. Puedes acceder al repositorio [aquí](https://github.com/ClaudioDL24/properties_rental).
 
 El proyecto utiliza las siguientes tecnologías:
@@ -33,4 +39,4 @@ Pasos para contribuir al proyecto.
 ## Licencia
 
 Información sobre la licencia del proyecto.
-# properties_rental
+

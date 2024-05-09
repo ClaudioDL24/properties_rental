@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TypeUser, User, TypeProperty, Property, PropertyPhoto, RentalRequest
+from .models import County, State, TypeUser, User, TypeProperty, Property, PropertyPhoto, RentalRequest
 
 # Register your models here.
 
@@ -28,3 +28,11 @@ class PropertyPhotoAdmin(admin.ModelAdmin):
 class RentalRequestAdmin(admin.ModelAdmin):
     list_display = ('tenant', 'property', 'request_date', 'approval_date')
     list_filter = ('property__name', 'tenant__name')
+
+@admin.register(State)
+class StateAdmin (admin.ModelAdmin):
+    list_display = ('name',)
+
+@admin.register(County)
+class CountyAdmin(admin.ModelAdmin):
+    list_display = ('name', 'id_state')
