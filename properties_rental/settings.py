@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'properties_rental_app',
+    #apps propias
+    'properties_rental_app.apps.PropertiesRentalAppConfig',
+   
 ]
 
 MIDDLEWARE = [

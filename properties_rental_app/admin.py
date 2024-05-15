@@ -1,8 +1,11 @@
 from django.contrib import admin
 from django.http import HttpResponse
 import csv
-
 from .models import TypeUser, User, State, County, TypeProperty, Property, PropertyPhoto, RentalRequest
+
+admin.site.site_header = "Administración de Propiedades"
+admin.site.index_title = "titulo"
+#admin.site.site_title = "titulo 3"
 
 # Función genéricapara exportar a CSV
 def export_to_csv(modeladmin, request, queryset):
