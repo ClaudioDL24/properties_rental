@@ -27,20 +27,20 @@ class User(models.Model):
         return f"{self.name} {self.surnames}"
     
 class State(models.Model):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, unique=True, verbose_name="State")
 
     def __str__(self):
         return self.name
 
 class County(models.Model):
-    name = models.CharField(max_length=100)
-    id_state = models.ForeignKey(State, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100, verbose_name="County")
+    id_state = models.ForeignKey(State, on_delete=models.CASCADE,verbose_name="State")
 
     def __str__(self):
         return self.name
 
 class TypeProperty(models.Model):
-    description = models.CharField(max_length=100)
+    description = models.CharField(max_length=100, verbose_name="Property of Type")
 
     def __str__(self):
         return self.description
