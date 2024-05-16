@@ -1,0 +1,18 @@
+[
+    { "model": "properties_rental_app.state", "pk": 1, "fields": { "name": "Tarapacá" } },
+    { "model": "properties_rental_app.state", "pk": 2, "fields": { "name": "Antofagasta" } },
+    { "model": "properties_rental_app.state", "pk": 3, "fields": { "name": "Atacama" } },
+    { "model": "properties_rental_app.state", "pk": 4, "fields": { "name": "Coquimbo" } },
+    { "model": "properties_rental_app.state", "pk": 5, "fields": { "name": "Valparaíso" } },
+    { "model": "properties_rental_app.state", "pk": 6, "fields": { "name": "Lib. Gral. Bernardo O'Higgins" } },
+    { "model": "properties_rental_app.state", "pk": 7, "fields": { "name": "Maule" } },
+    { "model": "properties_rental_app.state", "pk": 8, "fields": { "name": "Biobío" } },
+    { "model": "properties_rental_app.state", "pk": 9, "fields": { "name": "La Araucanía" } },
+    { "model": "properties_rental_app.state", "pk": 10, "fields": { "name": "Los Lagos" } },
+    { "model": "properties_rental_app.state", "pk": 11, "fields": { "name": "Aysén del General Carlos Ibáñez del Campo" } },
+    { "model": "properties_rental_app.state", "pk": 12, "fields": { "name": "Magallanes y Antártica Chilena" } },
+    { "model": "properties_rental_app.state", "pk": 13, "fields": { "name": "Metropolitana de Santiago" } },
+    { "model": "properties_rental_app.state", "pk": 14, "fields": { "name": "Los Ríos" } },
+    { "model": "properties_rental_app.state", "pk": 15, "fields": { "name": "Arica y Parinacota" } },
+    { "model": "properties_rental_app.state", "pk": 16, "fields": { "name": "Ñuble" } }
+]
