@@ -1,0 +1,6 @@
+[
+    { "model": "properties_rental_app.typeproperty", "pk": 1, "fields": { "description": "House"} },
+    { "model": "properties_rental_app.typeproperty", "pk": 2, "fields": { "description": "Department"} },
+    { "model": "properties_rental_app.typeproperty", "pk": 3, "fields": { "description": "Parcel Lot"} }
+
+]
