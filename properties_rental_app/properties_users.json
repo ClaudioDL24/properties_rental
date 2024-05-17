@@ -1,0 +1,73 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "usuario1",
+      "password": "password1"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "usuario2",
+      "password": "password2"
+    }
+  },
+  {
+    "model": "properties_rental_app.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "name": "Juan",
+      "surnames": "Pérez",
+      "rut": "12345678-9",
+      "address": "123 Calle Principal",
+      "phone_number": "123456789",
+      "email": "juan@example.com",
+      "type_user": 1
+    }
+  },
+  {
+    "model": "properties_rental_app.userprofile",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "name": "María",
+      "surnames": "Gómez",
+      "rut": "98765432-1",
+      "address": "456 Avenida Secundaria",
+      "phone_number": "987654321",
+      "email": "maria@example.com",
+      "type_user": 2
+    }
+  },
+  {
+    "model": "properties_rental_app.property",
+    "pk": 1,
+    "fields": {
+      "name": "Casa de campo",
+      "description": "Una hermosa casa en la naturaleza",
+      "m2_built": 200.5,
+      "m2_totals": 500.75,
+      "qty_parking_lots": 2,
+      "qty_rooms": 4,
+      "qty_bathrooms": 2,
+      "address": "Camino a la Montaña",
+      "id_county": 1,
+      "id_type_property": 1,
+      "rental_price": 1000,
+      "is_public": true
+    }
+  },
+  {
+    "model": "properties_rental_app.propertyphoto",
+    "pk": 1,
+    "fields": {
+      "property": 1,
+      "url": "https://example.com/photo1.jpg"
+    }
+  }
+]
+

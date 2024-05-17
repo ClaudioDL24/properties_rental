@@ -21,3 +21,5 @@ def update_type_user(type_user_id, new_description):
 def delete_type_user(type_user_id):
     type_user = TypeUser.objects.get(pk=type_user_id)
     type_user.delete()
+
+    

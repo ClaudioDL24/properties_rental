@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.http import HttpResponse
 import csv
-from .models import TypeUser, User, State, County, TypeProperty, Property, PropertyPhoto, RentalRequest
+from .models import TypeUser, UserProfile, State, County, TypeProperty, Property, PropertyPhoto, RentalRequest, LessorProperty
 
 admin.site.site_header = "Property Rental"
 admin.site.index_title = "Site Administration"
@@ -53,8 +53,8 @@ class TypeUserAdmin(admin.ModelAdmin):
     list_display = ('description',)
     actions = [export_to_csv_with_custom_description]
 
-@admin.register(User)
-class UserAdmin(admin.ModelAdmin):
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
     list_display = ('name', 'surnames', 'rut', 'type_user')
     actions = [export_to_csv_with_custom_description]
 
@@ -89,3 +89,8 @@ class StateAdmin(admin.ModelAdmin):
 class CountyAdmin(admin.ModelAdmin):
     list_display = ('name', 'id_state')
     actions = [export_to_csv_with_custom_description]
+
+@admin.register(LessorProperty)
+class LessorPropertyAdmin(admin.ModelAdmin):
+    list_display = ('lessor', 'property')
+

@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User #1
+
 
 # Create your models here.
 
@@ -14,7 +16,8 @@ class TypeUser(models.Model):
 #tenant_type = TypeUser.objects.create(description='Arrendatario')
 
  
-class User(models.Model):
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)# 2
     name = models.CharField(max_length=100)
     surnames = models.CharField(max_length=100)
     rut = models.CharField(max_length=20, unique=True)
@@ -58,6 +61,7 @@ class Property(models.Model):
     id_type_property = models.ForeignKey(TypeProperty, on_delete=models.CASCADE, related_name='users' )
     rental_price = models.DecimalField(max_digits=10, decimal_places=2)
     is_public = models.BooleanField(default=True)  # Nuevo campo para indicar el estado de publicación
+    
 
     def __str__(self):
         return self.name
@@ -70,7 +74,7 @@ class PropertyPhoto(models.Model):
         return f"Photo of {self.property.name}"
 
 class RentalRequest(models.Model):
-    tenant = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rental_requests')
+    tenant = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='rental_requests')
     property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='rental_requests')
     request_date = models.DateTimeField(default=timezone.now)
     approval_date = models.DateTimeField(null=True, blank=True)  # Fecha de aprobación/rechazo por parte del arrendador
@@ -78,6 +82,12 @@ class RentalRequest(models.Model):
     def __str__(self):
         return f"Request from {self.tenant.name} for {self.property.name}"
 
+class LessorProperty(models.Model):
+    lessor = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='properties')
+    property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='lessors')
+
+    def __str__(self):
+        return f"{self.lessor.name}'s property: {self.property.name}"
 
 
 
