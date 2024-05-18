@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h2>Profile</h2>
+    <p>Name: {{ request.user.userprofile.name }}</p>
+    <p>Surnames: {{ request.user.userprofile.surnames }}</p>
+    <p>RUT: {{ request.user.userprofile.rut }}</p>
+    <p>Address: {{ request.user.userprofile.address }}</p>
+    <p>Phone Number: {{ request.user.userprofile.phone_number }}</p>
+    <p>Email: {{ request.user.userprofile.email }}</p>
+    <a href="{% url 'edit_profile' %}">Edit Profile</a>
+</body>
+</html>
