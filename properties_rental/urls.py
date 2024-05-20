@@ -25,4 +25,8 @@ urlpatterns = [
     path('register/', views.register_view, name='register'),
     path('profile/', views.profile_view, name='profile'),
     path('profile/edit/', views.edit_profile_view, name='edit_profile'),
+    path('property/add/', views.add_property_view, name='add_property'),
+    path('property/edit/<int:pk>/', views.edit_property_view, name='edit_property'), 
+    path('property/delete/<int:pk>/', views.delete_property_view, name='delete_property'),
+    path('properties/', views.list_properties_view, name='list_properties'),
 ]
